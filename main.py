@@ -3,6 +3,7 @@ import discord
 import random
 import threading
 import base64
+import os
 from nicegui import ui
 from datetime import datetime
 from io import BytesIO
