@@ -132,7 +132,8 @@ def run_discord_thread():
     clean_token = state.token.strip().strip('"').strip("'")
     
     try:
-        client = discord.Client()
+        intents = discord.Intents.all()
+        client = discord.Client(intents=intents)
         state.client = client
     except Exception as e:
         add_log(f"CRITICAL: Engine initialization failed - {e}")
